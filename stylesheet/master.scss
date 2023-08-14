@@ -3,6 +3,7 @@
     height: 150vh;
     display: flex;
     flex-wrap: wrap;
+    
     .top {
         width: 100%;
         height: 110px;
@@ -226,6 +227,11 @@
         }
     }
 }
+
+
+// end of header section 
+
+
 .about {
     width: 100%;
     height: 180vh;
@@ -233,9 +239,9 @@
     grid-template-columns: 10% 5% 35% 50%;
     grid-template-rows: calc(100vh - 95px) 95px 80vh;
 
-    >*{
-        border: 2px solid red;
-    }
+    // >*{
+    //     // border: 2px solid red;
+    // }
     .sideimg1 {
         display: flex;
         align-items: center;
@@ -253,6 +259,63 @@
     .Aarticle {
         grid-column-end: span 2;
         grid-row-end: span 2;
+        display: flex;
+        flex-wrap: wrap;
+        >* {
+            width: 100%;
+            // border: 2px solid black;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-family: 'Abril Fatface', cursive;
+            font-family: 'Bai Jamjuree', sans-serif;
+            font-family: 'Edu SA Beginner', cursive;
+            font-family: 'Kanit', sans-serif;
+        }
+        >p {
+            font-size: 20px;
+            &:nth-of-type(1), &:nth-of-type(2) {
+                color: #c3c2bf;
+            }
+            &:nth-of-type(3), &:nth-of-type(4), &:nth-of-type(5) {
+                position: relative;
+                padding-left: 25px; 
+                margin-bottom: 10px;                 
+                &::before {
+                  content: "\2714"; 
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  font-size: 18px; 
+                  color: #d9a95b;
+                }
+            }
+            &:nth-of-type(1) {
+                width: 130px;
+                height: 30px;
+                margin-top: 110px;
+                border-bottom: 2px solid #d9a95b;
+            }
+        }
+        >h3 {
+            font-size: 55px;
+            margin-top: -20px;
+        }
+        >div {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            >img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+
+            }
+            >h5 { 
+                margin-left: 10px;
+                font-size: 28px;
+                color: #d9a95b;
+            }
+        }
     }
     .Aimage {
         grid-row-end: span 2;
@@ -313,8 +376,10 @@
         grid-row-start: 2;
         grid-row-end: span 2;
         grid-column-end: span ;
+        position: absolute;
+        top: calc(232vh);
+        z-index: -1;
         >img {
-            margin-top: -120px;
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -323,5 +388,280 @@
     .Agallery {
         grid-column-start: 3;
         grid-column-end: span 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        >div {
+            height: 400px;
+            width: 80%;
+            left: 190px;
+            position: absolute;
+            // background-color: yellow;
+            display: flex;
+            flex-wrap: nowrap;
+            >* {
+                width: 30%;
+                margin: 0 30px 0 0;
+                // border: 2px solid red;
+                border-radius: 20px;
+            }
+            >figure {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 20px;
+                >img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 20px;
+                }
+                >figcaption {
+                    background-color: white;
+                    // border: 2px solid black;
+                    position: absolute;
+                    width: 330px;
+                    height: 100px;
+                    z-index: 999;
+                    top: 300px;
+                    border-radius: 10px 10px 0 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 20px;
+                    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                    font-family: 'Abril Fatface', cursive;
+                    font-family: 'Bai Jamjuree', sans-serif;
+                    font-family: 'Edu SA Beginner', cursive;
+                    font-family: 'Kanit', sans-serif;
+                    font-weight: bold;
+                    text-align: center;
+                }
+            }
+            >div {
+                >img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 20px;
+                }
+                >div  {
+                    position: absolute;
+                    height: 100%;
+                    width: 30%;
+                    background-color: #d9a95bcc;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    >i {
+                        position: absolute;
+                        font-size: 100px;
+                        top: -20px;
+                        right: -20px;
+                    }
+                    div {
+                        // border: 2px solid black;
+                        width: 80%;
+                        height: 90%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                        font-family: 'Abril Fatface', cursive;
+                        font-family: 'Bai Jamjuree', sans-serif;
+                        font-family: 'Edu SA Beginner', cursive;
+                        font-family: 'Kanit', sans-serif;
+                        >* {
+                            width: 100%;
+                            height: 60px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                        >h6 {
+                            font-size: 30px;
+                            letter-spacing: 2px;
+                        }
+                        >div {
+                            height: 40px;
+                            >p:nth-of-type(2) {
+                                font-size: 18px;
+                                font-weight: bold;
+                                margin-top: -30px;
+                            }
+                            &:nth-of-type(1) {
+                                margin-top: -30px;
+                            }
+                            &:nth-of-type(2),  
+                            &:nth-of-type(3) {
+                                margin-top: 25px;
+                            }
+                        }
+                        >a {
+                            background-color: #23211b;
+                            border-radius: 50px;
+                            width: 80%;
+                            margin: 60px 10% 0 10%;
+                            font-size: 18px;
+                            font-weight: bold;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+        }
     }
+}
+
+
+// end of about section
+
+
+.quality {
+    width: 100%;
+    height: 95vh;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .background {
+        width: 100%;
+        height: 100%;
+        background-image: url(../img/interior-design-area-bg.jpg);
+        background-size: cover;
+        position: absolute;
+        z-index: -1;
+        background-attachment: fixed;
+    }
+    >div:nth-of-type(2),
+    div:nth-of-type(3) {
+        width: 30%;
+        height: 70%;
+        // border: 2px solid red;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: 'Abril Fatface', cursive;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-family: 'Edu SA Beginner', cursive;
+        font-family: 'Kanit', sans-serif;
+        // >* {
+        //     border: 2px solid green;
+        // }
+    }
+
+    >div:nth-of-type(2) {
+        width: 45%;
+        >p {
+            font-size: 18px;
+            width: 200px;
+            border-bottom: 2px solid #d9a95bcc;
+            color: #84827d;
+            letter-spacing: 1px;
+        }
+        >h3 {
+            font-size: 50px;
+            font-weight: bold;
+        } 
+        >div{
+            display: flex;
+            flex-wrap: nowrap;
+            margin-top: 50px;
+            >div {
+                background-color: #d9a95b;
+                font-size: 16px;
+                width: 150px;
+                margin-right: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50px;
+                height: 50px;
+                &:nth-of-type(2),
+                &:nth-of-type(3) {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+        >figure{
+            display: flex;
+            flex-wrap: nowrap;
+            margin-top: 35px;
+            justify-content: center;
+            align-items: center;
+            height: 170px;
+            >img {
+                width: 20%;
+                margin-left: -120px;
+            }
+            >figcaption {
+                margin-left: 20px;
+                width: 60%;
+                font-size: 18px;
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                font-family: 'Abril Fatface', cursive;
+                font-family: 'Bai Jamjuree', sans-serif;
+                font-family: 'Edu SA Beginner', cursive;
+                font-family: 'Kanit', sans-serif;
+                color: #84827d;
+                letter-spacing: 1px;
+            }
+        } 
+    }
+    div:nth-of-type(3) {
+        >div {
+            height: 50%;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(4 ,1fr);
+            >* {
+                // border: 2px solid blueviolet;
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                font-family: 'Abril Fatface', cursive;
+                font-family: 'Bai Jamjuree', sans-serif;
+                font-family: 'Edu SA Beginner', cursive;
+                font-family: 'Kanit', sans-serif;
+                display: flex;
+                align-items: center;
+            }
+            >i {
+                grid-row-end: span 2;
+                color: #d9a95b;
+                font-size: 60px;
+                padding-left: 25px;
+                margin-top: -40px;
+            }
+            >h5 {
+                grid-column-end: span 3;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                width: 90%;
+            }
+            >p {
+                grid-column-end: span 3;
+                grid-row-end: span 2;
+                color: #84827d;
+                font-size: 18px;
+                letter-spacing: 1px;
+                margin-top: -100px;
+            }
+            &:nth-of-type(2) {
+                margin-top: 30px;
+            }
+        }
+        >p {
+            border-top: 1px solid #84827d;
+            margin-top: -50px;
+        }
+    }
+}
+
+
+
+.project {
+    width: 100%;
+    height: 100vh;
+    background-color: yellow;
 }
