@@ -1,0 +1,313 @@
+.header {
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header .top {
+  width: 100%;
+  height: 110px;
+  background-color: #333029;
+}
+.header .top > a {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .top .contact {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.header .top .contact .link {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-right: 1px solid rgba(175, 170, 155, 0.431372549);
+}
+.header .top .contact .link > a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #23211b;
+  color: #d9a95b;
+  transition: 0.4s;
+}
+.header .top .contact .link > a:hover {
+  color: white;
+}
+.header .top .contact .link .prg {
+  cursor: pointer;
+  width: 50%;
+  margin-left: 10px;
+}
+.header .top .contact .link .prg > p:nth-of-type(1) {
+  color: #979285;
+  text-transform: capitalize;
+}
+.header .top .contact .link .prg > p:nth-of-type(2) {
+  color: white;
+  font-weight: bold;
+  transition: 0.4s;
+}
+.header .top .contact .link .prg > p:nth-of-type(2):hover {
+  color: #d9a95b;
+}
+.header .menu {
+  width: 100%;
+  height: 70px;
+}
+.header .menu .menubar {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #84837d;
+}
+.header .menu .menubar > a {
+  margin: 0 15px;
+  font-weight: bold;
+  transition: 0.4s;
+  position: relative;
+  text-transform: capitalize;
+}
+.header .menu .menubar > a:hover {
+  color: #d9a95b;
+}
+.header .menu .menubar > a:hover::after {
+  width: 100%;
+}
+.header .menu .menubar > a::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  height: 100%;
+  width: 0;
+  border-bottom: 3px solid #d9a95b;
+  transition: 1s;
+}
+.header .menu .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .menu .social > * {
+  margin: 0 5px;
+}
+.header .menu .social > a {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #f6f2eb;
+  color: #84827d;
+  transition: 0.4s;
+  position: relative;
+}
+.header .menu .social > a:hover {
+  background-color: #d9a95b;
+  color: white;
+}
+.header .menu .social .estimate {
+  margin-left: 20px;
+  width: 250px;
+  background-color: #d9a95b;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+.header .menu .social .estimate:hover::after {
+  width: 100%;
+}
+.header .menu .social .estimate > p {
+  position: absolute;
+  z-index: 999;
+}
+.header .menu .social .estimate::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #23211b;
+  border-radius: 50px;
+  transition: 0.4s;
+}
+.header .article {
+  width: 100%;
+  height: calc(100% - 180px);
+  background-image: url(../img/slide-v1-2.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.header .article > div {
+  width: 60%;
+  height: 60%;
+  margin-left: 190px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.header .article > div > * {
+  width: 100%;
+  color: rgba(35, 33, 27, 0.8941176471);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Abril Fatface", cursive;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-family: "Edu SA Beginner", cursive;
+  font-family: "Kanit", sans-serif;
+  letter-spacing: 1px;
+}
+.header .article > div > h6 {
+  font-size: 20px;
+  margin-top: -30px;
+}
+.header .article > div h1 {
+  font-size: 100px;
+  position: relative;
+  margin-left: 30px;
+  text-transform: capitalize;
+  margin-top: -40px;
+}
+.header .article > div h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 77%;
+  margin-right: 30px;
+  margin-top: 40px;
+  border-left: 10px solid #d9a95b;
+}
+.header .article > div > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 70px;
+  background-color: #d9a95b;
+  color: white;
+  font-size: 20px;
+  border-radius: 50px;
+  margin-top: -20px;
+}
+
+.about {
+  width: 100%;
+  height: 180vh;
+  display: grid;
+  grid-template-columns: 10% 5% 35% 50%;
+  grid-template-rows: calc(100vh - 95px) 95px 80vh;
+}
+.about > * {
+  border: 2px solid red;
+}
+.about .sideimg1 {
+  display: flex;
+  align-items: center;
+}
+.about .sideimg1 > div {
+  width: 110px;
+  height: 206px;
+}
+.about .sideimg1 > div > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about .Aarticle {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+.about .Aimage {
+  grid-row-end: span 2;
+}
+.about .Aimage > img {
+  height: 85%;
+  margin-top: 110px;
+  width: 78%;
+  position: relative;
+}
+.about .Aimage > figure {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: 380px;
+  top: calc(150vh + 180px);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  background-color: #d9a95b;
+  flex-wrap: wrap;
+}
+.about .Aimage > figure > img {
+  width: 50%;
+  height: 60%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 30%;
+}
+.about .Aimage > figure figcaption {
+  width: 80%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -20px;
+}
+.about .Aimage img:nth-of-type(2) {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  right: 120px;
+  top: calc(150vh + 380px);
+  z-index: -1;
+  animation: rotation 10s linear infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+.about .sideimg2 {
+  grid-row-start: 2;
+  grid-row-end: span 2;
+  grid-column-end: span;
+}
+.about .sideimg2 > img {
+  margin-top: -120px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about .Agallery {
+  grid-column-start: 3;
+  grid-column-end: span 2;
+}/*# sourceMappingURL=master.css.map */
