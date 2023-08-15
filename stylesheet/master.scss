@@ -337,6 +337,7 @@
             justify-content: center;
             background-color: #d9a95b;
             flex-wrap: wrap;
+            z-index: 999;
             >img {
                 width: 50%;
                 height: 60%;
@@ -350,6 +351,17 @@
                 font-weight: bold;
                 font-size: 20px;
                 margin-top: -20px;
+            }
+            &::before {
+                content: '';
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                background-color: #d9a95b;
+                transform: rotate(85deg);
+                top: 55px;
+                left: 55px;
+                z-index: -1;
             }
         }
         img:nth-of-type(2) {
@@ -659,9 +671,136 @@
 }
 
 
+// end of quality section
+
 
 .project {
     width: 100%;
-    height: 100vh;
-    background-color: yellow;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    >* {
+        width: 100%;
+        // border: 2px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-family: 'Abril Fatface', cursive;
+        font-family: 'Bai Jamjuree', sans-serif;
+        font-family: 'Edu SA Beginner', cursive;
+        font-family: 'Kanit', sans-serif;
+    }
+    >h3 {
+        width: 100%;
+        height: 150px;
+        background-color: #d9a95b;
+        font-size: 45px;
+        font-weight: bold;
+        color: white;
+        letter-spacing: 1px;
+        position: relative;
+        margin-top: -66px;
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: #d9a95b;
+            width: 100px;
+            height: 100px;
+            transform: rotate(45deg);
+            z-index: -1;
+            top: 40px;
+        }
+    }
+    >div {
+        width: 80%;
+        height: 230px;
+        flex-wrap: nowrap;
+        margin-top: -60px;
+        >figure {
+            width: 205px;
+            height: 100%;
+            // border: 2px solid blue;
+            flex-grow: 1;
+            margin: 0 15px;
+            border-radius: 10px;
+            >img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: relative;
+                border-radius: 10px;
+
+            }
+            >figcaption {
+                position: absolute;
+                width: 0px;
+                height: 227px;
+                top: 463vh;
+                background-image: linear-gradient(to top, #d9a95bda 5%, #d9a95b2e 50%,  #ffffff14 100%);
+                transition: 1s;
+                border-radius: 10px;
+            }
+            >p {
+                width: 209px;
+                height: 227px;
+                position: absolute;
+                top: 463vh;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 23px;
+                text-align: center;
+                background-color: inherit;
+                opacity: 0;
+                transition: 2s;
+                font-weight: bold;
+                overflow: hidden;
+                border-radius: 10px;
+                >a {
+                    position: absolute;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    background-color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: start;
+                    font-size: 25px;
+                    transition: 2s;
+                    top: 190px;
+                    color: black;
+                    &:hover {
+                        background-color: #333029;
+                        color: white;
+                    }
+                }
+            }
+            &:hover {
+                >figcaption {
+                    width: 214px;
+                    border-radius: 10px;
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+                >p {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+// end of the project section
+
+
+.services {
+    width: 100%;
+    height: 120vh;
+    background-image: linear-gradient(180deg, #f6f2eb 45%, white 45%);
 }
